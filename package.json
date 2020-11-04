@@ -10,6 +10,10 @@
   "scripts": {
     "__options__":"echo name project fs",
     "options_clean": "make -f Makefile.PHONY.wasi clean",
+    "__CC_native__":"echo name project fs",
+    "submodule_init": "git submodule init",
+    "submodule_update": "git submodule update",
+    "native": "./CC_native",
     "__CC_html__":"echo name project fs",
     "html": "./CC_html",
     "html_install": "make -f Makefile.PHONY.wasi install",
