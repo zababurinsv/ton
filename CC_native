@@ -1,13 +1,7 @@
 #!/bin/bash
 
-rm -rf ./liteclient-build
-mkdir ./liteclient-build
-cd ./liteclient-build
+rm -rf ./node-build
+mkdir ./node-build
+cd ./node-build
 cmake ../
-cmake --build . --target lite-client
-cmake --build . --target fift
-cmake --build . --target func
-
-wget  https://zababurinsv.github.io/blockchain/ton-lite-client-test1.config.json
-
-./lite-client/lite-client -C ton-lite-client-test1.config.json
+make

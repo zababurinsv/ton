@@ -8,17 +8,19 @@
   },
   "type": "module",
   "scripts": {
-    "__options__":"echo name project fs",
+    "__options__": "echo name project fs",
+    "dependency": "napa",
     "options_clean": "make -f Makefile.PHONY.wasi clean",
-    "__CC_native__":"echo name project fs",
+    "__CC_native__": "echo name project fs",
     "submodule_init": "git submodule init",
     "submodule_update": "git submodule update",
-    "native": "./CC_native",
-    "__CC_html__":"echo name project fs",
+    "client": "./CC_client",
+    "node": "./CC_native",
+    "__CC_html__": "echo name project fs",
     "html": "./CC_html",
     "html_install": "make -f Makefile.PHONY.wasi install",
     "html_uninstall": "make -f Makefile.PHONY.wasi uninstall",
-    "__CC_git__":"echo name project fs",
+    "__CC_git__": "echo name project fs",
     "git": "git status && git add -A && git commit -am 'update' && git push",
     "git_status": "git status",
     "git_pull": "git pull",
@@ -42,5 +44,11 @@
     "ignore": [
       "node_modules/*"
     ]
+  },
+  "napa": {
+    "zlib": "git+https://github.com/emscripten-ports/zlib.git"
+  },
+  "devDependencies": {
+    "napa": "^3.0.0"
   }
 }
